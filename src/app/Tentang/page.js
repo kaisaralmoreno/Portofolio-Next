@@ -25,7 +25,7 @@ const jadwal = [
 export const metadata = {
   title: "Tentang",
   description:
-    "Cerita, hobi, cita-cita, dan perjalanan belajar Irodatul Ika.",
+    "Cerita, hobi, cita-cita, dan perjalanan belajar Kaisar Al Moreno.",
 };
 
 export default function Tentang() {

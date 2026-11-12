@@ -20,7 +20,7 @@ export default function Home() {
     <main className="min-h-screen w-full bg-latar px-4 py-10 transition-colors dark:bg-gray-900">
       <div className="mx-auto w-full max-w-5xl space-y-10">
         <Hero
-          nama="Irodatul Ika"
+          nama="Kaisar Al Moreno"
           tagline="Siswa kelas XI SMK, calon Junior Web Developer di Kelas Industri UBIG."
         />
 
