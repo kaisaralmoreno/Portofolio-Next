@@ -1,6 +1,8 @@
 
 "use client";
 
+import { Button } from "@/components/ui/button";
+
 export default function FormKontak() {
   return (
     <form
@@ -14,11 +16,7 @@ export default function FormKontak() {
         value="Pesan Baru dari Website Portfolio"
       />
 
-      <input
-        type="hidden"
-        name="_captcha"
-        value="false"
-      />
+      <input type="hidden" name="_captcha" value="false" />
 
       <div className="space-y-5">
         <div>
@@ -92,12 +90,12 @@ export default function FormKontak() {
           />
         </div>
 
-        <button
+        <Button
           type="submit"
-          className="w-full rounded-lg bg-blue-600 px-5 py-3 font-semibold text-white transition hover:bg-blue-700"
+          className="w-full bg-blue-600 py-3 text-white hover:bg-blue-700"
         >
           Kirim Pesan
-        </button>
+        </Button>
       </div>
     </form>
   );

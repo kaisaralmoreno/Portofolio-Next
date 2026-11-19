@@ -1,4 +1,11 @@
+
 import FormKontak from "@/app/component/FormKontak";
+import {
+  Card,
+  CardHeader,
+  CardTitle,
+  CardContent,
+} from "@/components/ui/card";
 
 export const metadata = {
   title: "Kontak",
@@ -18,41 +25,47 @@ export default function Kontak() {
         </p>
 
         <div className="mt-8 grid gap-6 md:grid-cols-2">
-          <section className="rounded-xl border border-gray-200 bg-white p-6 shadow-sm transition-colors dark:border-gray-700 dark:bg-gray-800">
-            <FormKontak />
-          </section>
+          <Card className="bg-white dark:bg-gray-800">
+            <CardContent className="p-6">
+              <FormKontak />
+            </CardContent>
+          </Card>
 
-          <section className="h-fit rounded-xl border border-gray-200 bg-white p-6 shadow-sm transition-colors dark:border-gray-700 dark:bg-gray-800">
-            <h2 className="mb-4 text-xl font-bold text-utama dark:text-white">
-              Temukan Saya di
-            </h2>
+          <Card className="h-fit bg-white dark:bg-gray-800">
+            <CardHeader>
+              <CardTitle className="text-xl text-utama dark:text-white">
+                Temukan Saya di
+              </CardTitle>
+            </CardHeader>
 
-            <div className="space-y-3">
-              <div>
-                <h3 className="font-semibold text-utama dark:text-gray-200">
-                  GitHub
-                </h3>
+            <CardContent>
+              <div className="space-y-3">
+                <div>
+                  <h3 className="font-semibold text-utama dark:text-gray-200">
+                    GitHub
+                  </h3>
 
-                <a
-                  href="https://github.com/kaisaralmoreno"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-blue-600 hover:underline dark:text-blue-400"
-                >
-                  Kunjungi GitHub saya
-                </a>
+                  <a
+                    href="https://github.com/kaisaralmoreno"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-blue-600 hover:underline dark:text-blue-400"
+                  >
+                    Kunjungi GitHub saya
+                  </a>
+                </div>
+
+                <div>
+                  <a
+                    href="mailto:kaisaralmoreno6@gmail.com"
+                    className="text-blue-600 hover:underline dark:text-blue-400"
+                  >
+                    kaisaralmoreno6@gmail.com
+                  </a>
+                </div>
               </div>
-
-              <div>
-                <a
-                  href="mailto:kaisaralmoreno6@gmail.com"
-                  className="text-blue-600 hover:underline dark:text-blue-400"
-                >
-                  kaisaralmoreno6@gmail.com
-                </a>
-              </div>
-            </div>
-          </section>
+            </CardContent>
+          </Card>
         </div>
       </div>
     </main>

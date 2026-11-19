@@ -4,18 +4,16 @@ import Hero from "@/app/component/Hero";
 import ProyekCard from "@/app/component/proyekcard";
 import SkillCard from "@/app/component/skillcard";
 import { proyek } from "@/data/proyek";
-
-const skills = [
-  { nama: "HTML", level: "Menengah" },
-  { nama: "CSS", level: "Menengah" },
-  { nama: "Git dan GitHub", level: "Menengah" },
-  { nama: "Desain poster dengan Canva", level: "Menengah" },
-  { nama: "JavaScript", level: "Dasar" },
-];
+import { supabase } from "@/lib/supabase";
 
 const proyekTerbaru = proyek.slice(-3);
 
-export default function Home() {
+export default async function Home() {
+  const { data: skills } = await supabase
+    .from("skills")
+    .select("*")
+    .order("id");
+
   return (
     <main className="min-h-screen w-full bg-latar px-4 py-10 transition-colors dark:bg-gray-900">
       <div className="mx-auto w-full max-w-5xl space-y-10">
@@ -30,9 +28,9 @@ export default function Home() {
           </h2>
 
           <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3">
-            {skills.map((skill) => (
+            {skills && skills.map((skill) => (
               <SkillCard
-                key={skill.nama}
+                key={skill.id}
                 nama={skill.nama}
                 level={skill.level}
               />

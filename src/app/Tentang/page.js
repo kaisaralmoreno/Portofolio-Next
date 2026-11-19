@@ -1,10 +1,12 @@
-import Kartu from "@/app/component/kartu";
 
-const hobi = [
-  "Voli",
-  "Bersepeda",
-  "Traveling",
-];
+import {
+  Card,
+  CardHeader,
+  CardTitle,
+  CardContent,
+} from "@/components/ui/card";
+
+const hobi = ["Voli", "Bersepeda", "Traveling"];
 
 const rencana = [
   "Mempelajari HTML, CSS dan Javascript",
@@ -28,17 +30,31 @@ export const metadata = {
     "Cerita, hobi, cita-cita, dan perjalanan belajar Kaisar Al Moreno.",
 };
 
+function Kartu({ judul, children }) {
+  return (
+    <Card>
+      <CardHeader>
+        <CardTitle className="text-xl text-utama dark:text-sky-200">
+          {judul}
+        </CardTitle>
+      </CardHeader>
+      <CardContent className="text-gray-700 dark:text-gray-300">
+        {children}
+      </CardContent>
+    </Card>
+  );
+}
+
 export default function Tentang() {
   return (
     <main className="min-h-screen w-full bg-latar px-4 py-10 transition-colors dark:bg-gray-900">
       <div className="mx-auto w-full max-w-5xl space-y-6">
-
         <h1 className="text-3xl font-bold text-utama dark:text-sky-200 md:text-4xl">
           Tentang Saya
         </h1>
 
         <Kartu judul="Perkenalan">
-          <p className="text-gray-700 dark:text-gray-300">
+          <p>
             Saya adalah pelajar SMK Negeri 1 Pasuruan jurusan
             Rekayasa Perangkat Lunak (RPL) yang memiliki minat
             besar di bidang teknologi dan pengembangan website.
@@ -51,9 +67,8 @@ export default function Tentang() {
         </Kartu>
 
         <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
-
           <Kartu judul="Hobi">
-            <ul className="list-disc space-y-1 pl-5 text-gray-700 dark:text-gray-300">
+            <ul className="list-disc space-y-1 pl-5">
               {hobi.map((item) => (
                 <li key={item}>{item}</li>
               ))}
@@ -61,18 +76,17 @@ export default function Tentang() {
           </Kartu>
 
           <Kartu judul="Cita-cita">
-            <p className="mb-2 text-gray-700 dark:text-gray-300">
+            <p className="mb-2">
               Menjadi <strong>Full Stack Web Developer</strong>.
               Langkah yang saya rencanakan:
             </p>
 
-            <ol className="list-decimal space-y-1 pl-5 text-gray-700 dark:text-gray-300">
+            <ol className="list-decimal space-y-1 pl-5">
               {rencana.map((item) => (
                 <li key={item}>{item}</li>
               ))}
             </ol>
           </Kartu>
-
         </div>
 
         <Kartu judul="Jadwal Belajar">
@@ -89,21 +103,16 @@ export default function Tentang() {
                 {jadwal.map((item) => (
                   <tr
                     key={item.hari}
-                    className="border-b border-gray-200 text-gray-700 dark:border-gray-700 dark:text-gray-300"
+                    className="border-b border-gray-200 dark:border-gray-700"
                   >
-                    <td className="p-3 font-medium">
-                      {item.hari}
-                    </td>
-                    <td className="p-3">
-                      {item.kegiatan}
-                    </td>
+                    <td className="p-3 font-medium">{item.hari}</td>
+                    <td className="p-3">{item.kegiatan}</td>
                   </tr>
                 ))}
               </tbody>
             </table>
           </div>
         </Kartu>
-
       </div>
     </main>
   );

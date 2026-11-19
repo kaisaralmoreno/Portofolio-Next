@@ -2,6 +2,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { Button } from "@/components/ui/button";
 
 export default function TombolTema() {
   const [gelap, setGelap] = useState(false);
@@ -28,12 +29,13 @@ export default function TombolTema() {
   }
 
   return (
-    <button
+    <Button
       type="button"
       onClick={gantiTema}
-      className="rounded-lg bg-aksen px-4 py-2 text-sm font-semibold text-white hover:opacity-80 transition"
+      variant="default"
+      className="bg-aksen text-white hover:opacity-80"
     >
       {gelap ? "Mode Terang" : "Mode Gelap"}
-    </button>
+    </Button>
   );
 }
