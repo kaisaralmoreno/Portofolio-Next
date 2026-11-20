@@ -1,5 +1,5 @@
 
-import FormKontak from "@/app/component/FormKontak";
+import FormKontak from "@/component/FormKontak";
 import {
   Card,
   CardHeader,

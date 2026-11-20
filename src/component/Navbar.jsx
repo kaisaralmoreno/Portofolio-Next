@@ -3,7 +3,7 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import TombolTema from "@/app/component/TombolTema";
+import TombolTema from "@/component/TombolTema";
 
 const menu = [
   { href: "/", label: "Beranda" },

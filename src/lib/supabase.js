@@ -7,4 +7,7 @@ if (!supabaseUrl || !supabaseKey) {
   throw new Error("Environment Variables Supabase belum diatur.");
 }
 
-export const supabase = createClient(supabaseUrl, supabaseKey);
+export const supabase = createClient(
+  supabaseUrl,
+  supabaseKey
+);

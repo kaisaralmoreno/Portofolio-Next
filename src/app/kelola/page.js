@@ -65,11 +65,11 @@ export default async function Kelola() {
     .order("created_at", { ascending: false });
 
   if (errorPesan) {
-    console.error("Gagal mengambil pesan:", errorPesan.message);
+    console.errorPesan("Gagal mengambil pesan:", errorPesan.message);
   }
 
   if (errorProyek) {
-    console.error("Gagal mengambil proyek:", errorProyek.message);
+    console.errorProyek("Gagal mengambil proyek:", errorProyek.message);
   }
 
   return (

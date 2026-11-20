@@ -1,8 +1,8 @@
 
 import Link from "next/link";
-import Hero from "@/app/component/Hero";
-import ProyekCard from "@/app/component/proyekcard";
-import SkillCard from "@/app/component/skillcard";
+import Hero from "@/component/Hero";
+import ProyekCard from "@/component/proyekcard";
+import SkillCard from "@/component/skillcard";
 import { proyek } from "@/data/proyek";
 import { supabase } from "@/lib/supabase";
 

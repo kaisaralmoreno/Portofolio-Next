@@ -1,5 +1,5 @@
 import { proyek } from "@/data/proyek";
-import FilterProyek from "@/app/component/FilterProyek";
+import FilterProyek from "@/component/FilterProyek";
 
 export const metadata = {
   title: "proyek",
